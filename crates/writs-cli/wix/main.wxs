@@ -62,7 +62,7 @@
         Id='*'
         Name='writs-cli'
         UpgradeCode='F069FC06-1AA8-4A7B-8077-5383B0D86069'
-        Manufacturer='mrbandler'
+        Manufacturer='Michael Baudler'
         Language='1033'
         Codepage='1252'
         Version='$(var.Version)'>
@@ -70,7 +70,7 @@
         <Package Id='*'
             Keywords='Installer'
             Description='Command-line interface of writs.'
-            Manufacturer='mrbandler'
+            Manufacturer='Michael Baudler'
             InstallerVersion='450'
             Languages='1033'
             Compressed='yes'
