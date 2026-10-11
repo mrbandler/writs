@@ -60,8 +60,8 @@
 
     <Product
         Id='*'
-        Name='rust-template-cli'
-        UpgradeCode='CB986D74-F058-40E3-B4E2-D38D1B341B2B'
+        Name='writs-cli'
+        UpgradeCode='F069FC06-1AA8-4A7B-8077-5383B0D86069'
         Manufacturer='Michael Baudler'
         Language='1033'
         Codepage='1252'
@@ -69,7 +69,7 @@
 
         <Package Id='*'
             Keywords='Installer'
-            Description='Command-line interface of rust-template.'
+            Description='Command-line interface of writs.'
             Manufacturer='Michael Baudler'
             InstallerVersion='450'
             Languages='1033'
@@ -83,11 +83,11 @@
             DowngradeErrorMessage='A newer version of [ProductName] is already installed. Setup will now exit.'/>
 
         <Media Id='1' Cabinet='media1.cab' EmbedCab='yes' DiskPrompt='CD-ROM #1'/>
-        <Property Id='DiskPrompt' Value='rust-template-cli Installation'/>
+        <Property Id='DiskPrompt' Value='writs-cli Installation'/>
 
         <Directory Id='TARGETDIR' Name='SourceDir'>
             <Directory Id='$(var.PlatformProgramFilesFolder)' Name='PFiles'>
-                <Directory Id='APPLICATIONFOLDER' Name='rust-template-cli'>
+                <Directory Id='APPLICATIONFOLDER' Name='writs-cli'>
                     
                     <!--
                       Enabling the license sidecar file in the installer is a four step process:
@@ -110,7 +110,7 @@
                     -->
 
                     <Directory Id='Bin' Name='bin'>
-                        <Component Id='Path' Guid='2DCF68D7-579B-4379-B289-F1BADDEDCCD6' KeyPath='yes'>
+                        <Component Id='Path' Guid='75F547C3-A909-4B60-AF52-D5B370C06C47' KeyPath='yes'>
                             <Environment
                                 Id='PATH'
                                 Name='PATH'
@@ -123,9 +123,9 @@
                         <Component Id='binary0' Guid='*'>
                             <File
                                 Id='exe0'
-                                Name='rust-template.exe'
+                                Name='writs.exe'
                                 DiskId='1'
-                                Source='$(var.CargoTargetBinDir)\rust-template.exe'
+                                Source='$(var.CargoTargetBinDir)\writs.exe'
                                 KeyPath='yes'/>
                         </Component>
                     </Directory>
@@ -173,7 +173,7 @@
         <!--<Icon Id='ProductICO' SourceFile='wix\Product.ico'/>-->
         <!--<Property Id='ARPPRODUCTICON' Value='ProductICO' />-->
 
-        <Property Id='ARPHELPLINK' Value='https://github.com/mrbandler/rust-template'/>
+        <Property Id='ARPHELPLINK' Value='https://github.com/mrbandler/writs'/>
         
         <UI>
             <UIRef Id='WixUI_FeatureTree'/>

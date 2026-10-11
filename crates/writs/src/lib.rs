@@ -1,4 +1,4 @@
-//! The `rust-template` library.
+//! The `writs` library.
 
 mod error;
 
@@ -13,8 +13,8 @@ pub use error::{Error, Result};
 /// # Examples
 ///
 /// ```
-/// assert_eq!(rust_template::greet("world")?, "Hello, world!");
-/// # Ok::<(), rust_template::Error>(())
+/// assert_eq!(writs::greet("world")?, "Hello, world!");
+/// # Ok::<(), writs::Error>(())
 /// ```
 pub fn greet(name: &str) -> Result<String> {
     let name = name.trim();
