@@ -1,6 +1,6 @@
 # https://rust-lang.github.io/mdBook/
 [book]
-title = "rust-template"
+title = "writs"
 authors = ["Michael Baudler"]
 language = "en"
 src = "src"
@@ -9,5 +9,5 @@ src = "src"
 build-dir = "book"
 
 [output.html]
-git-repository-url = "https://github.com/mrbandler/rust-template"
-edit-url-template = "https://github.com/mrbandler/rust-template/edit/main/docs/{path}"
+git-repository-url = "https://github.com/mrbandler/writs"
+edit-url-template = "https://github.com/mrbandler/writs/edit/main/docs/{path}"

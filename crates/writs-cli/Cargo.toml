@@ -1,6 +1,6 @@
 [package]
-name = "rust-template-cli"
-description = "Command-line interface of rust-template."
+name = "writs-cli"
+description = "Command-line interface of writs."
 publish = false
 version.workspace = true
 edition.workspace = true
@@ -13,11 +13,13 @@ readme.workspace = true
 
 # The package is `<name>-cli` because the library owns `<name>`; the command is still `<name>`.
 [[bin]]
-name = "rust-template"
+name = "writs"
 path = "src/main.rs"
+# Shares its name with the library, so `cargo doc` would overwrite the library docs (cargo#6313).
+doc = false
 
 [dependencies]
-rust-template.workspace = true
+writs.workspace = true
 clap.workspace = true
 miette = { workspace = true, features = ["fancy"] }
 tracing.workspace = true
@@ -30,10 +32,10 @@ workspace = true
 [package.metadata.dist]
 dist = true
 # Homebrew formula named after the command, not the package.
-formula = "rust-template"
+formula = "writs"
 
 [package.metadata.wix]
-upgrade-guid = "CB986D74-F058-40E3-B4E2-D38D1B341B2B"
-path-guid = "2DCF68D7-579B-4379-B289-F1BADDEDCCD6"
+upgrade-guid = "F069FC06-1AA8-4A7B-8077-5383B0D86069"
+path-guid = "75F547C3-A909-4B60-AF52-D5B370C06C47"
 license = false
 eula = false

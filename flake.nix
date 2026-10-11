@@ -1,5 +1,5 @@
 {
-  description = "rust-template";
+  description = "writs";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -45,14 +45,14 @@
         in
         {
           default = rustPlatform.buildRustPackage {
-            pname = "rust-template";
+            pname = "writs";
             version = cargo.workspace.package.version;
             src = pkgs.lib.cleanSource ./.;
             # Dependency hashes come from Cargo.lock; nothing to update by hand.
             cargoLock.lockFile = ./Cargo.lock;
-            cargoBuildFlags = [ "--package" "rust-template-cli" ];
-            cargoTestFlags = [ "--package" "rust-template-cli" ];
-            meta.mainProgram = "rust-template";
+            cargoBuildFlags = [ "--package" "writs-cli" ];
+            cargoTestFlags = [ "--package" "writs-cli" ];
+            meta.mainProgram = "writs";
           };
         }
       );

@@ -1,3 +1,3 @@
 # Introduction
 
-Welcome to the rust-template documentation.
+Welcome to the writs documentation.
